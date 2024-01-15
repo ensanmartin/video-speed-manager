@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "Video Speed Manager",
+    "description": "Simple extension which changes the speed of any HTML5 video",
+    "action": {
+        "default_title": "Video Speed Manager",
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*/*"],
+            "exclude_matches": ["https://drive.google.com/*"],
+            "js": ["content-script.js"]
+        },
+        {
+            "matches": ["https://drive.google.com/*"],
+            "js": ["content-script-drive.js"]
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+:root {
+    --main-color: #1CFEBA;
+    --secondary-color: #9D8DF1;
+    --background-color: #1B1B1E;
+}
+
+body {
+    padding: 2em;
+    font-family: 'Secular One';
+    width: 300px;
+    height: 225px;
+    background: var(--background-color);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+input[type = range] {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 1.5em 0;
+    width: 100%;
+    background: var(--background-color);
+}
+
+input[type = range]::-webkit-slider-runnable-track {
+    background: linear-gradient(to left, var(--main-color), var(--secondary-color));
+    border-radius: 5em;
+    height: 1em;
+}
+
+input[type = range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #00000000;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 5em;
+    background: #FFFFFF;
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+p {
+    font-size: 2rem;
+}
+
+.error-msg span {
+    color: var(--main-color);
+}
+
+.reload-btn {
+    margin-top: -2em;
+    font-family: 'Secular One';
+    font-size: 1.5rem;
+    background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none;
+}
+
+.reload-btn:hover {
+    background: linear-gradient(to left, var(--main-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.reload-btn:hover {
+    cursor: pointer;
+}
+
+.loading-container {
+    position: fixed;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-icon, .loading-icon:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+
+.loading-icon {
+    margin: 0px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -100%;
+    border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-left: 1.1em solid rgb(255, 255, 255);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: loading-animation 1.1s infinite linear;
+    animation: loading-animation 1.1s infinite linear;
+}
+
+@keyframes loading-animation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
