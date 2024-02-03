@@ -1,4 +1,20 @@
-let videoDOM = document.querySelector('iframe').querySelector('video');
+let driveIframeDOM = document.querySelector('#drive-viewer-video-player-object-0');
+
+// const checkIframe = setInterval(() => {
+//     if (driveIframeDOM === null) {
+//         driveIframeDOM = document.querySelector('#drive-viewer-video-player-object-0');
+
+//     } else {
+//         clearInterval(checkIframe);
+
+//         console.log(driveIframeDOM);
+//         console.log(driveIframeDOM.contentWindow);
+//         console.log(driveIframeDOM.contentDocument);
+        
+//     }
+// }, 15000)
+
+console.log(driveIframeDOM)
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     videoDOM = document.querySelector('iframe').querySelector('video');

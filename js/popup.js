@@ -94,7 +94,5 @@ function reloadPage() {
 window.addEventListener('load', () => {
     document.querySelector('.loading-container').remove();
 
-    console.log(chrome.tabs.TabStatus)
-
     startup();
 });
